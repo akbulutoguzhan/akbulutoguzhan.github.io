@@ -1,0 +1,11 @@
+theme = "blowfish"
+baseURL = "akbulutoguzhan.github.io"
+
+[languages]
+  _merge = 'deep'
+  [languages.en]
+    _merge = 'deep'
+  [languages.en.menus]
+    _merge = 'deep'
+  [languages.en.params]
+     _merge = 'deep'
