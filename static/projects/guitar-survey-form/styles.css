@@ -1,0 +1,99 @@
+html { 
+    background: url("akbulutoguzhan.github.io/static/projects/guitar-survey-form/images") no-repeat center center fixed !important; 
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+body {
+    font-family: 'Roboto', Helvetica;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    background-color: transparent !important;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    margin: 1em auto 0;
+    text-align: center;
+}
+
+p {
+    margin: 0.5em auto 50px;
+    text-align: center;
+}
+
+form {
+    width: 60vw;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 25px 50px 25px 50px;
+    border: 2px solid #ccc;
+    border-radius: 0.75%;
+    background-color: rgba(255, 255, 255, 0.729);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input, textarea, select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 50%;
+    margin: 1em auto;
+    height: 4em;
+    font-size: 1.1rem;
+    background-color: #4c4c60;
+    border-color: white;
+    min-width: 200px;
+}
+
+#bottom-space {
+    padding-bottom: 50px;
+}
+
+#name, #email {
+    margin-bottom: 10px;
+}
+  
+.section-header {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.title-section {
+    color: rgb(255, 255, 255);
+}
+
+.text-area {
+    resize: none;
+}
+
+.checkable {
+    margin-top: 30px;
+}
+
+#title {
+    margin-bottom: 0;
+}
+
+#description {
+    margin-top: 0;
+}

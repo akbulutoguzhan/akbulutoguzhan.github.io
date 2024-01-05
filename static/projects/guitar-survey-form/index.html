@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+    <meta name="description" content="Guitar Survey Form">
+</head>
+
+<body>
+    <div class="title-section">
+        <h1 id="title">GUITAR SURVEY FORM</h1>
+        <p id="description">Thank you for taking the time to answer these questions</p>
+    </div>
+
+    <!-- Form -->
+    <form id="survey-form">
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <!-- Name -->
+            <label class="section-header" for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <!-- Email -->
+            <label class="section-header" for="email">Email</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Your E-Mail">
+
+            <!-- Age -->
+            <label class="section-header" for="number">Age <small>(Optional)</small></label>
+            <input type="number" id="number" name="number" pattern="[0-9]+([.][0-9]+)?" min="6" max="24" placeholder="Your Age">
+        </fieldset>
+
+        <!-- Skill Level Section -->
+        <fieldset>
+            <legend class="section-header">Skill Level</legend>
+
+            <!-- Skill Levels -->
+            <div>
+                <input type="radio" id="level-beginner" name="skill-level">
+                <label class="checkable" for="level-beginner">Beginner</label>
+
+                <input type="radio" id="level-intermediate" name="skill-level">
+                <label class="checkable" for="level-intermediate">Intermediate</label>
+
+                <input type="radio" id="level-pro" name="skill-level" checked>
+                <label class="checkable" for="level-pro">Pro</label>
+            </div>
+        </fieldset>
+
+        <!-- Guitar Brand Section -->
+        <fieldset>
+            <legend class="section-header">Favorite Guitar Brand</legend>
+
+            <!-- Favorite Brand Dropdown -->
+            <select id="dropdown" name="guitar-brand">
+                <option value="" selected disabled>(Select a brand)</option>
+                <option value="brand-fender">Fender</option>
+                <option value="brand-prs">PRS</option>
+                <option value="brand-gibson">Gibson</option>
+                <option value="brand-other">Other</option>
+            </select>
+        </fieldset>
+
+        <!-- Other Instruments Section -->
+        <fieldset>
+            <legend class="section-header">Other Instruments (Check all that apply)</legend>
+
+            <!-- Checkbox Options -->
+            <label><input type="checkbox"><span class="checkable">Piano</span></label>
+            <label><input type="checkbox"><span class="checkable">Drums</span></label>
+            <label><input type="checkbox"><span class="checkable">Violin</span></label>
+            <label><input type="checkbox"><span class="checkable">Trumpet</span></label>
+            <label><input type="checkbox"><span class="checkable">Other</span></label>
+        </fieldset>
+
+        <!-- Additional Comments Section -->
+        <fieldset>
+            <legend class="section-header">Additional Comments</legend>
+            <textarea class="text-area" id="additional-comments" name="additional-comments" rows="3" cols="30" placeholder="Any comments..."></textarea>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" id="submit">
+
+    </form>
+    <div id="bottom-space">
+
+    </div>
+</body>
+
+</html>
