@@ -1,0 +1,55 @@
+* { 
+    /* Reset all pre-determined css rules */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    /* Add fixed background image*/
+    background-image: url("https://lastfm.freetls.fastly.net/i/u/770x0/bb5f27848eba6b123481cb65609d24e2.jpg#bb5f27848eba6b123481cb65609d24e2");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: auto;
+    height: auto;
+}
+
+#title-section {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,0.8016456582633054) 0%, rgba(0,0,0,0.4318977591036415) 20%, rgba(0,0,0,0) 40%);
+    color: white;
+}
+
+#title {
+    font-size: 60px;
+    padding-right: 350px;
+    padding-bottom: 15px;
+}
+
+#quote {
+    font-size: 30px;
+    padding-bottom: 60px;
+    padding-left: 150px;
+}
+
+.align-bottom-center {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.align-bottom-center {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
