@@ -1,5 +1,4 @@
-* { 
-    /* Reset all pre-determined css rules */
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -7,49 +6,261 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-}
-
-body {
-    /* Add fixed background image*/
-    background-image: url("https://lastfm.freetls.fastly.net/i/u/770x0/bb5f27848eba6b123481cb65609d24e2.jpg#bb5f27848eba6b123481cb65609d24e2");
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  body {
+    background-image: url("https://media.bantmag.com/wp-content/uploads/2015/09/thoms.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: auto;
     height: auto;
-}
-
-#title-section {
+  }
+  
+  #title-section {
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,0.8016456582633054) 0%, rgba(0,0,0,0.4318977591036415) 20%, rgba(0,0,0,0) 40%);
     color: white;
-}
-
-#title {
-    font-size: 60px;
-    padding-right: 350px;
+  }
+  
+  #title {
+    font-size: 80px;
     padding-bottom: 15px;
-}
-
-#quote {
-    font-size: 30px;
+  }
+  
+  #quote {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 32px;
     padding-bottom: 60px;
-    padding-left: 150px;
-}
-
-.align-bottom-center {
+  }
+  
+  .align-bottom-center {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-}
-
-.align-bottom-center {
+  }
+  
+  #summary {
+    background-color: rgb(228, 228, 228);
+    width: auto;
+    height: 250px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #summary-text {
+    color: rgb(20, 20, 20);
+    width: 60%;
+    font-size: 1vw;
+    text-align: justify;
+    margin: auto;
+  }
+  
+  #timeline-section {
+    background-color: white;
+    width: auto;
+  }
+  
+  #tribute-info {
+    background-color: white;
+    width: auto;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  #tribute-info a:link,
+  #tribute-info a:visited {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  #tribute-info a:hover {
+    text-decoration: none;
+  }
+  
+  #tribute-info a {
+    margin: auto;
+    font-size: 18px;
+  }
+  
+  .hexa {
+    border: 5px;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    background: rgb(66, 66, 66);
     position: absolute;
-    bottom: 0;
+    z-index: 5;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+  }
+  
+  .timeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    z-index: 5;
+  }
+  
+  .timeline li {
+    padding: 2em 0;
+  }  
+  
+  .direction-l,
+  .direction-r {
+    float: none;
     width: 100%;
     text-align: center;
-}
+  }
+  
+  .flag-wrapper {
+    text-align: center;
+    position: relative;
+  }
+  
+  .flag {
+    position: relative;
+    display: inline;
+    background: rgb(255, 255, 255);
+    font-weight: 600;
+    z-index: 15;
+    padding: 6px 10px;
+    text-align: left;
+    border-radius: 5px;
+  }
+  
+  .direction-l .flag:after,
+  .direction-r .flag:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    height: 0;
+    width: 0;
+    margin-left: -8px;
+    pointer-events: none;
+  }
+  
+  .desc {
+    position: relative;
+    background: rgb(254, 254, 254);
+    z-index: 15;
+  }
+  
+  .direction-l .desc,
+  .direction-r .desc {
+    position: relative;
+    margin: 1em 1em 0 1em;
+    z-index: 15;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline {
+      width: 660px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  
+    .timeline li:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+  
+    .timeline .hexa {
+      left: -28px;
+      right: auto;
+      top: 8px;
+    }
+  
+    .timeline .direction-l .hexa {
+      left: auto;
+      right: -28px;
+    }
+  
+    .direction-l {
+      position: relative;
+      width: 310px;
+      float: left;
+      text-align: right;
+    }
+  
+    .direction-r {
+      position: relative;
+      width: 310px;
+      float: right;
+      text-align: left;
+    }
+  
+    .flag-wrapper {
+      display: inline-block;
+    }
+  
+    .flag {
+      font-size: 18px;
+    }
+  
+    .direction-l .flag:after {
+      left: auto;
+      right: -16px;
+      top: 50%;
+      margin-top: -8px;
+      border: solid transparent;
+      border-left-color: rgb(254, 254, 254);
+      border-width: 8px;
+    }
+  
+    .direction-r .flag:after {
+      top: 50%;
+      margin-top: -8px;
+      border: solid transparent;
+      border-right-color: rgb(254, 254, 254);
+      border-width: 8px;
+      left: -8px;
+    }
+  
+    .direction-r .desc {
+      margin: 1em 0 0 0.75em;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .timeline {
+      width: 800px;
+      margin: 0 auto;
+    }
+  
+    .direction-l {
+      position: relative;
+      width: 380px;
+      float: left;
+      text-align: right;
+    }
+  
+    .direction-r {
+      position: relative;
+      width: 380px;
+      float: right;
+      text-align: left;
+    }
+  }
+  
